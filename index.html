@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cube Root Solutions - Technology That Just Works | Managed IT Services Starting at $1,500/month</title>
+    <title>Cube Root Solutions - Strategic Technology Partners</title>
     <meta name="description"
-        content="Enterprise-grade IT solutions for growing businesses. M365 management, AI automation, and 24/7 support starting at $1,500/month. No $5,000 minimums.">
-    <meta name="keywords" content="managed IT services, M365 support, small business IT, affordable MSP, AI automation">
+        content="Enterprise-grade technology architecture for growing businesses. M365 management, AI automation, and strategic guidance to propel your business forward.">
+    <meta name="keywords"
+        content="managed IT services, technology consulting, AI automation, digital transformation, M365 optimization">
+    <link rel="canonical" href="https://cuberootsolutions.com">
 
     <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="Cube Root Solutions - Technology That Just Works">
+    <meta property="og:title" content="Cube Root Solutions - Technology That Propels You Forward">
     <meta property="og:description"
-        content="Enterprise IT solutions starting at $1,500/month. No more $5,000 MSP minimums.">
-    <meta property="og:image" content="/assets/images/og-image.jpg">
-    <meta property="og:type" content="website">
+        content="We don't just fix computers; we engineer efficiency. Strategic technology partnership for growing teams.">
+    <meta property="og:image" content="https://cuberootsolutions.com/og-image.jpg">
+    <meta property="og:url" content="https://cuberootsolutions.com">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +25,565 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --primary-blue: #1e3a8a;
+            --accent-green: #10b981;
+            --light-gray: #f8fafc;
+            --dark-gray: #374151;
+            --text-gray: #6b7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--light-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .cta-button {
+            background: var(--accent-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-blue);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1e40af 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: #fef2f2;
+            border-left: 5px solid #ef4444;
+            padding: 3rem 0;
+        }
+
+        .problem-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .problem-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: #dc2626;
+            margin-bottom: 1rem;
+        }
+
+        .problem-section p {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #dc2626;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-top: 0.5rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .services h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 4rem 0;
+            background: var(--light-gray);
+        }
+
+        .pricing h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid var(--accent-green);
+            transform: scale(1.05);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-green);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .plan-features li:before {
+            content: "✓";
+            color: var(--accent-green);
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .plan-button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .plan-button:hover {
+            background: #1e40af;
+        }
+
+        .featured .plan-button {
+            background: var(--accent-green);
+        }
+
+        .featured .plan-button:hover {
+            background: #059669;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .contact h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+        }
+
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-green);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent-green);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .form-submit:hover {
+            background: #059669;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #4b5563;
+            color: #9ca3af;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 80%;
+                text-align: center;
+            }
+
+            .services-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -50,12 +610,13 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="fade-in">Technology That Just Works</h1>
-            <p class="fade-in">Enterprise-grade technology solutions designed for growing businesses. We handle the
-                complexity so you can focus on what matters most. No more $5,000 MSP minimums.</p>
+            <h1 class="fade-in">Technology That Propels You Forward</h1>
+            <p class="fade-in">We don't just fix computers; we engineer efficiency. Enterprise-grade technology
+                architecture designed to scale with your ambition. We handle the complexity so you can focus on
+                innovation.</p>
             <div class="hero-buttons fade-in">
-                <a href="#contact" class="btn-primary">Start Your Free Assessment</a>
-                <a href="#pricing" class="btn-secondary">View Pricing</a>
+                <a href="#contact" class="btn-primary">Schedule Strategy Session</a>
+                <a href="#services" class="btn-secondary">Explore Services</a>
             </div>
         </div>
     </section>
@@ -64,23 +625,24 @@
     <section class="problem-section">
         <div class="container">
             <div class="problem-content fade-in">
-                <h2>The $5,000 Problem</h2>
-                <p>Most IT companies won't work with businesses like yours. They require $5,000+ monthly minimums,
-                    leaving growing companies with DIY solutions or unreliable support.</p>
-                <p><strong>You deserve better.</strong></p>
+                <h2>The Efficiency Gap</h2>
+                <p>Most growing businesses are held back by reactive IT. Systems break, data is siloed, and manual
+                    processes drain productivity. The cost of inefficient technology isn't just frustration—it's lost
+                    revenue.</p>
+                <p><strong>Bridge the gap between where you are and where you need to be.</strong></p>
 
                 <div class="problem-stats">
                     <div class="stat-box fade-in">
-                        <div class="stat-number">$5,000+</div>
-                        <div class="stat-label">Traditional MSP minimum monthly fee</div>
+                        <div class="stat-number">22%</div>
+                        <div class="stat-label">Productivity lost to inefficient technology daily</div>
                     </div>
                     <div class="stat-box fade-in">
-                        <div class="stat-number">73%</div>
-                        <div class="stat-label">Of small businesses can't afford enterprise IT</div>
+                        <div class="stat-number">3.5x</div>
+                        <div class="stat-label">ROI on strategic digital transformation</div>
                     </div>
                     <div class="stat-box fade-in">
-                        <div class="stat-number">$1,500</div>
-                        <div class="stat-label">Our starting price for the same services</div>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Commitment to your operational success</div>
                     </div>
                 </div>
             </div>
@@ -135,74 +697,72 @@
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
         <div class="container">
-            <h2 class="fade-in">Simple, Transparent Pricing</h2>
-            <p style="text-align: center; font-size: 1.1rem; color: #6b7280; margin-bottom: 2rem;">No hidden fees. No
-                surprise charges. Just honest pricing for honest service.</p>
+            <h2 class="fade-in">Strategic Partnerships</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #6b7280; margin-bottom: 2rem;">Flexible partnership
+                models designed to scale with your business lifecycle.</p>
 
             <div class="pricing-grid">
                 <!-- Essentials Plan -->
                 <div class="pricing-card fade-in">
-                    <h3 style="font-family: Poppins; font-size: 1.8rem; color: #1e3a8a; margin-bottom: 1rem;">Essentials
-                    </h3>
-                    <div class="price">$1,500<span style="font-size: 1rem; color: #6b7280;">/month</span></div>
-                    <div class="price-period">Perfect for growing teams of 5-15 employees</div>
+                    <h3 style="font-family: Poppins; font-size: 1.8rem; color: #1e3a8a; margin-bottom: 1rem;">Core
+                        Operations</h3>
+                    <div class="price-period">Reliable foundation for agile teams</div>
                     <ul class="plan-features">
-                        <li>M365 user management (add/remove/licenses)</li>
-                        <li>Basic security monitoring & alerts</li>
-                        <li>Monthly system health reports</li>
-                        <li>Email/phone support (business hours)</li>
-                        <li>Basic backup verification</li>
-                        <li>Quarterly business reviews</li>
-                        <li>Emergency support coordination</li>
+                        <li>M365 user lifecycle management</li>
+                        <li>Proactive system monitoring & health</li>
+                        <li>Automated patch management</li>
+                        <li>Helpdesk support (Business Hours)</li>
+                        <li>Basic redundancy verification</li>
+                        <li>Quarterly technology review</li>
                     </ul>
-                    <button class="plan-button" onclick="openContactForm('Essentials')">Get Started</button>
+                    <button class="plan-button" onclick="openContactForm('Core Operations')">Discuss
+                        Partnership</button>
                 </div>
 
                 <!-- Professional Plan -->
                 <div class="pricing-card featured fade-in">
-                    <div class="featured-badge">Most Popular</div>
-                    <h3 style="font-family: Poppins; font-size: 1.8rem; color: #1e3a8a; margin-bottom: 1rem;">
-                        Professional</h3>
-                    <div class="price">$2,250<span style="font-size: 1rem; color: #6b7280;">/month</span></div>
-                    <div class="price-period">Ideal for established teams of 15-35 employees</div>
+                    <div class="featured-badge">Growth Engine</div>
+                    <h3 style="font-family: Poppins; font-size: 1.8rem; color: #1e3a8a; margin-bottom: 1rem;">Strategic
+                        Growth</h3>
+                    <div class="price-period">Optimization & automation for scaling orgs</div>
                     <ul class="plan-features">
-                        <li>Everything in Essentials</li>
-                        <li>Advanced M365 configuration & optimization</li>
-                        <li>AI-powered productivity insights</li>
-                        <li>Automated onboarding workflows</li>
-                        <li>Security compliance monitoring</li>
-                        <li>Priority support + emergency response</li>
-                        <li>Monthly strategy calls</li>
-                        <li>Advanced reporting & analytics</li>
+                        <li>Everything in Core Operations</li>
+                        <li>Advanced M365 security & compliance</li>
+                        <li>AI-driven workflow productivity analysis</li>
+                        <li>Automated onboarding zero-touch setup</li>
+                        <li>Vendor relationship management</li>
+                        <li>Priority support channel</li>
+                        <li>Monthly strategic alignment calls</li>
                     </ul>
-                    <button class="plan-button" onclick="openContactForm('Professional')">Get Started</button>
+                    <button class="plan-button" onclick="openContactForm('Strategic Growth')">Discuss
+                        Partnership</button>
                 </div>
 
                 <!-- Enterprise Plan -->
                 <div class="pricing-card fade-in">
                     <h3 style="font-family: Poppins; font-size: 1.8rem; color: #1e3a8a; margin-bottom: 1rem;">Enterprise
-                    </h3>
-                    <div class="price">$3,000<span style="font-size: 1rem; color: #6b7280;">/month</span></div>
-                    <div class="price-period">Comprehensive solution for 35+ employees</div>
+                        Scale</h3>
+                    <div class="price-period">Full-service IT department handling</div>
                     <ul class="plan-features">
-                        <li>Everything in Professional</li>
-                        <li>Custom AI automation implementation</li>
-                        <li>Advanced analytics & reporting</li>
-                        <li>Dedicated account management</li>
-                        <li>Strategic technology planning</li>
-                        <li>Change management support</li>
-                        <li>24/7 emergency support</li>
-                        <li>Executive technology reviews</li>
+                        <li>Everything in Strategic Growth</li>
+                        <li>Custom AI automation development</li>
+                        <li>Deep analytics & business intelligence</li>
+                        <li>Dedicated Account Success Manager</li>
+                        <li>Multi-year technology roadmap</li>
+                        <li>Change management & training</li>
+                        <li>24/7/365 Emergency Support</li>
+                        <li>Executive board advisory</li>
                     </ul>
-                    <button class="plan-button" onclick="openContactForm('Enterprise')">Get Started</button>
+                    <button class="plan-button" onclick="openContactForm('Enterprise Scale')">Discuss
+                        Partnership</button>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <p style="color: #6b7280; margin-bottom: 1rem;">💡 <strong>All plans include:</strong> Setup, training,
-                    and ongoing optimization</p>
-                <p style="color: #6b7280;">🔒 <strong>No long-term contracts.</strong> Month-to-month flexibility with
-                    30-day notice.</p>
+                <p style="color: #6b7280; margin-bottom: 1rem;">💡 <strong>Value First:</strong> We align our success
+                    with your operational efficiency.</p>
+                <p style="color: #6b7280;">🔒 <strong>Flexible Terms:</strong> We earn your business every month. No
+                    long-term lock-ins.</p>
             </div>
         </div>
     </section>
@@ -261,43 +821,146 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Cube Root Solutions</h3>
-                    <p style="color: #9ca3af; line-height: 1.6;">Modern technology management for growing businesses.
-                    </p>
+                    <div class="logo" style="color: white; margin-bottom: 1rem;">Cube Root Solutions</div>
+                    <p style="color: #9ca3af;">Technology that just works for growing businesses. Enterprise-grade
+                        solutions without enterprise pricing.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">M365 Management</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">AI Automation</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="#services">M365 Management</a></li>
+                        <li><a href="#services">AI Automation</a></li>
+                        <li><a href="#services">24/7 Support</a></li>
+                        <li><a href="#services">Proactive Monitoring</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#contact">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#" onclick="alert('Privacy policy page coming soon!')">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Connect</h3>
+                    <h3>Contact</h3>
                     <ul>
-                        <li><a href="#">hello@cuberootsolutions.com</a></li>
-                        <li><a href="#">(555) 765-4321</a></li>
-                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="mailto:alex@cuberootsolutions.com">alex@cuberootsolutions.com</a></li>
+                        <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li>24/7 Emergency: (Enterprise clients)</li>
+                        <li><a href="#contact">Schedule Assessment</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 Cube Root Solutions. All rights reserved.
+                <p>&copy; 2024 Cube Root Solutions LLC. All rights reserved. | Technology that just works.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Form handling
+        function openContactForm(plan) {
+            document.getElementById('interest').value = plan;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('fullName').focus();
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+
+            // Simple validation
+            if (!data.fullName || !data.email || !data.company) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Simulate form submission
+            const submitButton = document.querySelector('.form-submit');
+            const originalText = submitButton.textContent;
+
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                alert('Thank you! We\'ll contact you within 24 hours to schedule your free assessment.\n\nWe\'ll review your requirements and come prepared with specific recommendations for your business.');
+
+                // Reset form
+                event.target.reset();
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+
+                // In production, you would send this data to your backend
+                console.log('Form data:', data);
+            }, 2000);
+        }
+
+        // Add some dynamic interactivity
+        document.addEventListener('DOMContentLoaded', function () {
+            // Trigger first animations immediately
+            setTimeout(() => {
+                document.querySelectorAll('.hero .fade-in').forEach((el, index) => {
+                    setTimeout(() => el.classList.add('visible'), index * 200);
+                });
+            }, 300);
+
+            // Add hover effects to service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.borderLeft = '5px solid #10b981';
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.borderLeft = 'none';
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
