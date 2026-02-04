@@ -48,20 +48,71 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    window.handleFormSubmit = function (e) {
+    window.handleFormSubmit = async function (e) {
         e.preventDefault();
-        const btn = e.target.querySelector('button');
+        const form = e.target;
+        const btn = form.querySelector('button[type="submit"]');
         const originalText = btn.innerText;
+        const successMsg = document.getElementById('form-success');
+        const errorMsg = document.getElementById('form-error');
+
+        if (successMsg) successMsg.style.display = 'none';
+        if (errorMsg) errorMsg.style.display = 'none';
 
         btn.innerText = 'Sending...';
         btn.disabled = true;
 
-        // Simulate form submission
-        setTimeout(() => {
-            alert('Thank you! A technology consultant will contact you shortly to schedule your assessment.');
-            e.target.reset();
+        const formData = {
+            fullName: form.querySelector('input[name="fullName"]')?.value || '',
+            email: form.querySelector('input[name="email"]')?.value || form.querySelector('input[type="email"]')?.value || '',
+            company: form.querySelector('input[name="company"]')?.value || '',
+            employees: form.querySelector('select[name="employees"]')?.value || '',
+            interest: form.querySelector('select[name="interest"]')?.value || '',
+            challenges: form.querySelector('textarea[name="challenges"]')?.value || form.querySelector('textarea')?.value || ''
+        };
+
+        try {
+            const API_ENDPOINT = 'https://api.cuberootsolutions.com/api/leads';
+            
+            const response = await fetch(API_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                if (successMsg) {
+                    successMsg.style.display = 'block';
+                    successMsg.textContent = 'Thank you! A technology consultant will contact you within 24 hours to schedule your free assessment.';
+                } else {
+                    alert('Thank you! A technology consultant will contact you within 24 hours to schedule your free assessment.');
+                }
+                form.reset();
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-CONVERSION_ID',
+                        'value': formData.interest.includes('Enterprise') ? 3000 : (formData.interest.includes('Professional') ? 2250 : 1500),
+                        'currency': 'USD'
+                    });
+                }
+            } else {
+                throw new Error('Server returned error status');
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            
+            if (errorMsg) {
+                errorMsg.style.display = 'block';
+                errorMsg.textContent = 'There was an error submitting your request. Please email us directly at contact@cuberootsolutions.com';
+            } else {
+                alert('There was an error. Please email us at contact@cuberootsolutions.com');
+            }
+        } finally {
             btn.innerText = originalText;
             btn.disabled = false;
-        }, 1500);
+        }
     }
 });
