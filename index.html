@@ -44,7 +44,7 @@
                 <li><a href="#results">Results</a></li>
                 <li><a href="#pricing">Partnership</a></li>
                 <!-- Calendly Integration -->
-                <li><a href="#contact" class="cta-button" onclick="return false;">Book Discovery Call</a></li>
+                <li><a href="#contact" class="cta-button">Book Discovery Call</a></li>
             </ul>
         </div>
     </nav>
@@ -192,40 +192,25 @@
         </div>
     </section>
 
-    <!-- NEW: Case Study Carousel (Replaces Ops Section Content) -->
     <section id="results" class="ops-section">
         <div class="container">
             <div class="section-header" style="margin-bottom: 3rem;">
-                <h2>Proven Results.</h2>
-                <p>Real stories of businesses that scaled with Cube Root Solutions.</p>
+                <h2>Problems We Solve Every Day.</h2>
+                <p>These scenarios might sound familiar. They're exactly why we exist.</p>
             </div>
 
-            <div class="carousel-container" style="position: relative; max-width: 900px; margin: 0 auto;">
-                <div class="carousel-slide active">
-                    <div class="case-card"
-                        style="background: var(--bg-card); padding: 3rem; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
-                        <h3 style="color: var(--accent-green); font-size: 1.5rem; mb-2">Logistics Firm</h3>
-                        <h4 style="color: white; font-size: 1.2rem; margin-bottom: 1.5rem;">The "Paperless"
-                            Transformation</h4>
-                        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">"We saved 40 hours
-                            a week by automating our dispatch system. The system paid for itself in 3 months."</p>
-                        <div style="font-weight: 700; color: white;">— Sarah J., COO</div>
-                    </div>
+            <div class="scenario-grid">
+                <div class="scenario-card">
+                    <h3>The 3AM Server Crash</h3>
+                    <p>Your main application goes down on a Friday night. Nobody knows the admin password. The last backup was... when, exactly? We make sure you never have that conversation again.</p>
                 </div>
-                <div class="carousel-slide">
-                    <div class="case-card"
-                        style="background: var(--bg-card); padding: 3rem; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
-                        <h3 style="color: var(--accent-green); font-size: 1.5rem; mb-2">Law Practice</h3>
-                        <h4 style="color: white; font-size: 1.2rem; margin-bottom: 1.5rem;">Secure Client Portal</h4>
-                        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">"Clients used to
-                            email sensitive docs. Now they upload securely. It's safer and faster."</p>
-                        <div style="font-weight: 700; color: white;">— Michael R., Managing Partner</div>
-                    </div>
+                <div class="scenario-card">
+                    <h3>The Spreadsheet That Runs Everything</h3>
+                    <p>One person built it. Nobody else understands it. If it breaks, half your operation stops. We replace fragile spreadsheet workflows with actual software that your whole team can rely on.</p>
                 </div>
-
-                <div style="text-align: center; margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
-                    <button id="prev-slide" class="btn-secondary" style="padding: 0.5rem 1rem;">←</button>
-                    <button id="next-slide" class="btn-secondary" style="padding: 0.5rem 1rem;">→</button>
+                <div class="scenario-card">
+                    <h3>The Cloud Bill Surprise</h3>
+                    <p>You moved to the cloud because it was supposed to save money. Now the bill is three times what you expected and nobody can explain why. We audit, optimize, and get your costs under control.</p>
                 </div>
             </div>
         </div>
@@ -328,7 +313,7 @@
                 <p>You run the business. We run the engine.</p>
             </div>
             <div class="form-container">
-                <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                <form id="contactForm" action="https://formspree.io/f/mdaloeor" method="POST">
                     <div class="form-group">
                         <label>Full Name *</label>
                         <input type="text" name="fullName" placeholder="John Doe" required>
@@ -356,9 +341,9 @@
                         <label>Service Interest</label>
                         <select name="interest" id="interest">
                             <option value="">Select Package</option>
-                            <option>Essentials ($1,500/month)</option>
-                            <option>Professional ($2,250/month)</option>
-                            <option>Enterprise ($3,000/month)</option>
+                            <option>The Fixer</option>
+                            <option>The Partner</option>
+                            <option>The Architect</option>
                             <option>Custom solution</option>
                         </select>
                     </div>
@@ -382,7 +367,7 @@
 
     <footer>
         <div class="container" style="text-align: center;">
-            <p>&copy; 2024 Cube Root Solutions. Invisible Tech. Visible Profit.</p>
+            <p>&copy; 2026 Cube Root Solutions. Invisible Tech. Visible Profit.</p>
         </div>
     </footer>
 

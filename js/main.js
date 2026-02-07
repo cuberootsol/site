@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     initROICalculator();
-    initCaseStudyCarousel();
 });
 
 /* --- ROI Estimator --- */
@@ -36,36 +35,4 @@ function initROICalculator() {
     });
 }
 
-/* --- Case Study Carousel --- */
-function initCaseStudyCarousel() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const nextBtn = document.getElementById('next-slide');
-    const prevBtn = document.getElementById('prev-slide');
 
-    if (slides.length === 0) return;
-
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        // Handle wrap-around
-        if (index >= slides.length) currentSlide = 0;
-        else if (index < 0) currentSlide = slides.length - 1;
-        else currentSlide = index;
-
-        slides[currentSlide].classList.add('active');
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
-    }
-
-    // Auto-advance
-    setInterval(() => {
-        showSlide(currentSlide + 1);
-    }, 6000);
-}
