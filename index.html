@@ -38,14 +38,18 @@
             <div class="logo">
                 <span>[ ]</span>&nbsp; CUBE ROOT SOLUTIONS
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#services">Outcomes</a></li>
                 <li><a href="#pro-services">Services</a></li>
                 <li><a href="#results">Results</a></li>
                 <li><a href="#pricing">Partnership</a></li>
-                <!-- Calendly Integration -->
                 <li><a href="#contact" class="cta-button">Book Discovery Call</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -70,38 +74,61 @@
                 </p>
             </div>
 
-            <div
-                style="max-width: 900px; margin: 0 auto; background: var(--bg-card); padding: 3rem; border-radius: 16px; border: 1px solid var(--border-color); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div class="roi-container">
                 <form id="roi-form">
-                    <div class="form-group">
-                        <label>Number of Employees</label>
-                        <input type="number" id="emp-count" placeholder="10" required>
+                    <div class="roi-form-grid">
+                        <div class="roi-section">
+                            <div class="roi-section-label">Core Inputs</div>
+                            <div class="form-group">
+                                <label>Number of Employees *</label>
+                                <input type="number" id="emp-count" placeholder="10" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Hours Wasted / Week (per employee) *</label>
+                                <input type="number" id="hours-lost" placeholder="5" min="0.5" step="0.5" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Avg Fully-Loaded Hourly Cost ($) *</label>
+                                <input type="number" id="hourly-rate" placeholder="45" min="1" required>
+                            </div>
+                        </div>
+                        <div class="roi-section">
+                            <div class="roi-section-label">Optional (More Accurate)</div>
+                            <div class="form-group">
+                                <label>Downtime Hours / Month</label>
+                                <input type="number" id="downtime-hours" placeholder="0" min="0" step="0.5">
+                            </div>
+                            <div class="form-group">
+                                <label>Cost per Downtime Hour ($)</label>
+                                <input type="number" id="downtime-rate" placeholder="0" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label>Monthly Software / Tool Spend ($)</label>
+                                <input type="number" id="software-spend" placeholder="0" min="0">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Hours Wasted / Week (per emp)</label>
-                        <input type="number" id="hours-lost" placeholder="5" required>
+                    <div class="recovery-slider-group">
+                        <label>Realistic Recovery Rate: <strong id="recovery-label">70%</strong></label>
+                        <input type="range" id="recovery-rate" min="40" max="90" value="70" step="5" class="recovery-slider">
+                        <div class="slider-labels"><span>Conservative (40%)</span><span>Aggressive (90%)</span></div>
                     </div>
-                    <div class="form-group">
-                        <label>Avg Hourly Rate ($)</label>
-                        <input type="number" id="hourly-rate" placeholder="45" required>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Calculate Savings</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Calculate Annual Savings</button>
                 </form>
 
-                <div id="roi-result" class="hidden" style="text-align: center;">
-                    <span
-                        style="display: block; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 1.1rem;">Potential
-                        Annual Savings</span>
-                    <strong id="estimated-savings"
-                        style="display: block; font-size: 3.5rem; color: var(--accent-green); margin-bottom: 1rem;">$0</strong>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">By automating repetitive tasks and
-                        streamlining workflows.</p>
+                <div id="roi-result" class="hidden">
+                    <div class="roi-result-inner">
+                        <span class="roi-result-label">Estimated Annual Savings</span>
+                        <strong id="estimated-savings" class="roi-savings-value">$0</strong>
+                        <div id="roi-breakdown" class="roi-breakdown"></div>
+                        <p class="roi-disclaimer">Based on inputs provided. Actual results vary by engagement scope.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
+    <section id="services" class="services reveal">
         <div class="container">
             <div class="section-header">
                 <h2>The "It Just Works" Standard</h2>
@@ -146,7 +173,7 @@
     </section>
 
     <!-- Professional Services (Ala-Carte) -->
-    <section id="pro-services" class="services alt-bg">
+    <section id="pro-services" class="services alt-bg reveal">
         <div class="container">
             <div class="section-header">
                 <h2>Tools That Fit Like a Glove</h2>
@@ -192,7 +219,7 @@
         </div>
     </section>
 
-    <section id="results" class="ops-section">
+    <section id="results" class="ops-section reveal">
         <div class="container">
             <div class="section-header" style="margin-bottom: 3rem;">
                 <h2>Problems We Solve Every Day.</h2>
@@ -216,7 +243,7 @@
         </div>
     </section>
 
-    <section id="pricing" class="pricing-section">
+    <section id="pricing" class="pricing-section reveal">
         <div class="container">
             <div class="section-header">
                 <h2>Stop Paying by the Hour.</h2>
@@ -306,7 +333,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact reveal">
         <div class="container">
             <div class="section-header">
                 <h2>Take Your Life Back.</h2>
