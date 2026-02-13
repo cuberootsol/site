@@ -1,452 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cube Root Solutions | Technology That Drives Profit</title>
-    <meta name="description"
-        content="We streamline your technology so you can focus on growing your business. Strategic guidance for business leaders.">
-    <meta name="keywords"
-        content="business efficiency, fractional cto, profit maximization, operational excellence, technology strategy">
+    <meta name="description" content="Fractional CTO and IT consulting for growing businesses. Custom software, cloud optimization, and operational excellence.">
     <link rel="canonical" href="https://cuberootsolutions.com">
-
-    <meta property="og:title" content="Cube Root Solutions - Efficiency is the Goal">
-    <meta property="og:description"
-        content="Stop wrestling with technology. Start executing on your vision. We handle the infrastructure so you can scale.">
-    <meta property="og:image" content="https://cuberootsolutions.com/og-image.jpg">
+    <meta property="og:title" content="Cube Root Solutions - Technology That Drives Profit">
+    <meta property="og:description" content="Stop wrestling with technology. Start executing on your vision.">
     <meta property="og:url" content="https://cuberootsolutions.com">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Shared SEO Meta Tags -->
     <meta property="og:type" content="business.business">
     <meta property="og:site_name" content="Cube Root Solutions">
     <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Favicon (Inline SVG) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2215%22 fill=%22%23111827%22/><text x=%2250%22 y=%2270%22 font-family=%22monospace%22 font-weight=%22bold%22 font-size=%2280%22 text-anchor=%22middle%22 fill=%22%2310b981%22>[ ]</text></svg>">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Cube Root Solutions",
-      "url": "https://cuberootsolutions.com",
-      "image": "https://cuberootsolutions.com/og-image.jpg",
-      "description": "We streamline your technology so you can focus on growing your business. Strategic guidance for business leaders.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "US"
-      },
-      "priceRange": "$$$"
-    }
-    </script>
-
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Cube Root Solutions","url":"https://cuberootsolutions.com","description":"Fractional CTO and IT consulting for growing businesses.","address":{"@type":"PostalAddress","addressCountry":"US"},"priceRange":"$$$"}</script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-
+    <div class="status-ticker">
+        <div class="ticker-label"><span class="status-dot"></span> SYSTEMS NOMINAL</div>
+        <div class="ticker-track"><div id="ticker-content" class="ticker-content"></div></div>
+    </div>
     <nav>
         <div class="container nav-container">
-            <div class="logo">
-                <span>[ ]</span>&nbsp; CUBE ROOT SOLUTIONS
-            </div>
+            <a href="#" class="logo"><span>[ ]</span>&nbsp; CUBE ROOT SOLUTIONS</a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#services">Outcomes</a></li>
-                <li><a href="#pro-services">Services</a></li>
-                <li><a href="#results">Results</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-we-work">Process</a></li>
+                <li><a href="#roi-calc">ROI Engine</a></li>
                 <li><a href="#pricing">Partnership</a></li>
                 <li><a href="#contact" class="cta-button">Book Discovery Call</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
         </div>
     </nav>
-
     <header class="hero">
-        <div class="container">
-            <h1>Technology That Drives Profit.<br><span>Not Just Cost.</span></h1>
-            <p>You didn't start a business to manage software licenses or reboot servers. We fix your technical
-                foundation so you can get back to what you actually do: making money.</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn btn-primary">Fix My Operations</a>
-                <a href="#services" class="btn btn-secondary">How We Do It</a>
+        <canvas id="hero-canvas"></canvas>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">FRACTIONAL CTO &amp; IT CONSULTING</div>
+                <h1>Technology That Drives Profit.<br><span>Not Just Cost.</span></h1>
+                <p class="hero-sub">You didn't start a business to manage servers or debug software. We become your technology department — so you can get back to what actually makes money.</p>
+                <div class="hero-btns"><a href="#contact" class="btn btn-primary">Fix My Operations</a><a href="#services" class="btn btn-secondary">How We Do It</a></div>
             </div>
-            <p style="margin-top: 3.5rem; font-size: 0.9rem; color: var(--text-muted); opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase;">
-                Trusted by businesses across industries to reclaim lost revenue
-            </p>
+            <div class="hero-visual">
+                <div class="dashboard-mock">
+                    <div class="dmh"><div class="dmh-dots"><span></span><span></span><span></span></div><span class="dmh-title">operations dashboard</span></div>
+                    <div class="dm-body">
+                        <div class="dm-row"><div class="dm-metric"><span class="dm-label">Uptime</span><span class="dm-value green">99.97%</span></div><div class="dm-metric"><span class="dm-label">Avg Response</span><span class="dm-value blue">12ms</span></div></div>
+                        <div class="dm-bars"><div class="dm-bar" style="height:40%"></div><div class="dm-bar" style="height:65%"></div><div class="dm-bar" style="height:45%"></div><div class="dm-bar active" style="height:85%"></div><div class="dm-bar" style="height:70%"></div><div class="dm-bar" style="height:55%"></div><div class="dm-bar" style="height:90%"></div><div class="dm-bar" style="height:60%"></div></div>
+                        <div class="dm-row"><div class="dm-metric sm"><span class="dm-label">Tickets Resolved</span><span class="dm-value">847</span></div><div class="dm-metric sm"><span class="dm-label">Cost Saved (MTD)</span><span class="dm-value green">$24,300</span></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-
-    <!-- NEW: ROI Calculator -->
-    <section class="value-prop" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <section class="stats-bar">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="color: white; font-size: 2.2rem; margin-bottom: 1rem;">The Cost of Inefficiency</h2>
-                <p style="color: var(--text-muted); font-size: 1.1rem;">How much is manual work costing you annually?
-                </p>
+            <div class="stats-label">OUR PRACTICE</div>
+            <div class="stats-grid">
+                <div class="stat-item"><div class="stat-number" data-target="8">0</div><div class="stat-desc">Years in Technology Leadership</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="24">0</div><div class="stat-desc">Hour Response SLA</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="12">0</div><div class="stat-desc">Hrs / Week Reclaimed per Client (Avg)</div></div>
+                <div class="stat-item"><div class="stat-number" data-target="0">0</div><div class="stat-desc">Long-Term Contracts Required</div></div>
             </div>
-
+        </div>
+    </section>
+    <section class="section cost-reality reveal">
+        <div class="container">
+            <div class="section-header"><h2>The Real Cost of "Good Enough" IT</h2><p>Technology debt compounds silently. Here's what it actually costs growing businesses.</p></div>
+            <div class="cost-grid">
+                <div class="cost-card"><div class="cost-num">$427B</div><div class="cost-label">Lost annually by US businesses to IT downtime</div><div class="cost-source">ITIC, 2024</div></div>
+                <div class="cost-card"><div class="cost-num">23<span class="cost-unit">hrs</span></div><div class="cost-label">Per employee per month lost to manual workarounds</div><div class="cost-source">McKinsey Digital, 2024</div></div>
+                <div class="cost-card"><div class="cost-num">60%</div><div class="cost-label">Of SMBs have no disaster recovery plan</div><div class="cost-source">Datto State of the Channel, 2024</div></div>
+                <div class="cost-card"><div class="cost-num">$9,000<span class="cost-unit">/hr</span></div><div class="cost-label">Average cost of IT downtime for a mid-size business</div><div class="cost-source">Gartner, 2024</div></div>
+            </div>
+            <div class="cost-callout"><p>Most of these costs are invisible — buried in payroll, lost deals, and employee frustration. The first step is seeing them clearly. That's what we do.</p></div>
+        </div>
+    </section>
+    <section id="services" class="section services reveal">
+        <div class="container">
+            <div class="section-header"><h2>The "It Just Works" Standard</h2><p>We don't speak geek. We speak profit, efficiency, and growth.</p></div>
+            <div class="grid-3">
+                <div class="card"><div class="card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg></div><h3>Revenue Multipliers</h3><p>Tech isn't a cost center when it's wired for growth. We connect your systems to capture every opportunity — from lead to close to repeat customer.</p></div>
+                <div class="card"><div class="card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h3>Frictionless Workflows</h3><p>Stop double-entry. Stop email attachments. Stop copying between tabs. We build systems where data flows automatically — no babysitting required.</p></div>
+                <div class="card"><div class="card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h3>Protected Assets</h3><p>You don't need to be a security expert. We lock the doors, set the alarms, and monitor the perimeter so you don't have to think about it.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="section comparison reveal">
+        <div class="container">
+            <div class="section-header"><h2>Not All IT Support Is Equal</h2><p>The difference between reactive firefighting and a real technology strategy.</p></div>
+            <div class="compare-table">
+                <div class="compare-col compare-them">
+                    <div class="compare-header">Break-Fix IT / Generic MSPs</div>
+                    <div class="compare-item negative">Show up after things break, bill by the hour</div>
+                    <div class="compare-item negative">One-size-fits-all monitoring with alert fatigue</div>
+                    <div class="compare-item negative">Recommend whatever vendor gives them the best kickback</div>
+                    <div class="compare-item negative">No understanding of your business goals or growth plans</div>
+                    <div class="compare-item negative">"Call the help desk" for every issue</div>
+                    <div class="compare-item negative">Technology as a cost to manage</div>
+                </div>
+                <div class="compare-col compare-us">
+                    <div class="compare-header">Cube Root Solutions</div>
+                    <div class="compare-item positive">Proactive strategy that prevents fires before they start</div>
+                    <div class="compare-item positive">Tailored monitoring and automation for YOUR workflows</div>
+                    <div class="compare-item positive">Vendor-agnostic recommendations based on what actually fits</div>
+                    <div class="compare-item positive">Technology roadmap aligned to your revenue targets</div>
+                    <div class="compare-item positive">Direct access to a senior technologist who knows your stack</div>
+                    <div class="compare-item positive">Technology as a competitive advantage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pro-services" class="section pro-services reveal">
+        <div class="container">
+            <div class="section-header"><h2>Tools That Fit Like a Glove</h2><p>Stop bending your business to fit off-the-shelf software. We build exactly what you need.</p></div>
+            <div class="grid-3">
+                <div class="card"><div class="card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg></div><h3>Custom Business Software</h3><p>Replace brittle spreadsheets with software built for exactly how your business operates. Not another SaaS subscription — your tool, your rules.</p></div>
+                <div class="card"><div class="card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div><h3>Secure AI Agents</h3><p>Give your team superpowers without giving away your data. Private AI agents that draft, verify, and automate — all inside your own infrastructure.</p></div>
+                <div class="card"><div class="card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg></div><h3>Cloud Architecture</h3><p>Your cloud bill shouldn't be a mystery. We audit, eliminate waste, right-size resources, and build an architecture that scales with you.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-banner"><div class="container"><div class="cta-inner"><div class="cta-text"><h3>Spending more on IT every year but getting less?</h3><p>Most businesses are. A 30-minute discovery call can show you exactly where the money is going.</p></div><a href="#contact" class="btn btn-primary">Free Discovery Call</a></div></div></section>
+    <section id="how-we-work" class="section methodology reveal">
+        <div class="container">
+            <div class="section-header"><h2>How We Work</h2><p>A clear, structured process from first call to ongoing partnership.</p></div>
+            <div class="process-timeline">
+                <div class="process-line"></div>
+                <div class="process-step"><div class="step-num">01</div><h3>Discover</h3><p>We audit your current stack, map your workflows, and identify where time and money are leaking. No sales pitch — just an honest assessment.</p><span class="step-detail">Deliverable: Technology Audit + Opportunity Map</span></div>
+                <div class="process-step"><div class="step-num">02</div><h3>Design</h3><p>We build a technology roadmap aligned to your business goals — what to fix now, what to build next, and what to defer. Prioritized by ROI.</p><span class="step-detail">Deliverable: Strategic Roadmap + Budget Forecast</span></div>
+                <div class="process-step"><div class="step-num">03</div><h3>Execute</h3><p>We implement in focused sprints. Weekly updates, no jargon, clear milestones. You know exactly what's happening and when it'll be done.</p><span class="step-detail">Cadence: Weekly Sprint Updates + Monthly Business Review</span></div>
+                <div class="process-step"><div class="step-num">04</div><h3>Optimize</h3><p>Technology isn't set-and-forget. We continuously monitor, tune, and evolve your systems as your business grows.</p><span class="step-detail">Deliverable: Quarterly Performance Report + Updated Roadmap</span></div>
+            </div>
+        </div>
+    </section>
+    <section id="results" class="section scenarios reveal">
+        <div class="container">
+            <div class="section-header"><h2>Sound Familiar?</h2><p>These scenarios are why we exist. If you're nodding, we should talk.</p></div>
+            <div class="scenario-grid">
+                <div class="scenario-card"><h3>The 3AM Server Crash</h3><p>Your main application goes down Friday night. Nobody knows the admin password. The last backup was... when? We make sure you never have that conversation again.</p></div>
+                <div class="scenario-card"><h3>The Spreadsheet That Runs Everything</h3><p>One person built it. Nobody else understands it. If it breaks, half your operation stops. We replace fragile spreadsheets with real software.</p></div>
+                <div class="scenario-card"><h3>The Cloud Bill Surprise</h3><p>You moved to the cloud to save money. Now the bill is 3x what you expected and nobody can explain why. We audit, optimize, and get costs under control.</p></div>
+                <div class="scenario-card"><h3>The Tool Graveyard</h3><p>14 SaaS tools. Your team uses 6. Three do the same thing. Nobody remembers who approved the others. We consolidate, integrate, and eliminate waste.</p></div>
+                <div class="scenario-card"><h3>The "IT Guy" Left</h3><p>Your one technical person quit. They documented nothing. Now you see how much was held together with duct tape and tribal knowledge. We untangle it and build it right.</p></div>
+                <div class="scenario-card"><h3>The Growth Bottleneck</h3><p>Business is growing but systems aren't keeping up. Onboarding takes forever, processes don't scale, your team spends more time on workarounds than real work.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="section founding-program reveal">
+        <div class="container">
+            <div class="founding-wrapper">
+                <div class="founding-content">
+                    <div class="founding-badge">LIMITED — 10 SPOTS</div>
+                    <h2>Founding Client Program</h2>
+                    <p class="founding-lead">We're offering our first 10 consulting clients <strong>50% off</strong> their initial engagement in exchange for a published case study. You get senior-level IT strategy at a fraction of the cost. We get proof of impact.</p>
+                    <div class="founding-details">
+                        <div class="founding-perk"><span class="perk-icon">-></span><div><strong>50% Off Your First Engagement</strong><span>Full technology audit, roadmap, or custom build at half price.</span></div></div>
+                        <div class="founding-perk"><span class="perk-icon">-></span><div><strong>Published Case Study</strong><span>We document the transformation (anonymized or named — your call).</span></div></div>
+                        <div class="founding-perk"><span class="perk-icon">-></span><div><strong>Priority Scheduling</strong><span>Founding clients get first access to our calendar and dedicated response times.</span></div></div>
+                        <div class="founding-perk"><span class="perk-icon">-></span><div><strong>Lifetime Rate Lock</strong><span>Your founding rate becomes your permanent rate for all future work.</span></div></div>
+                    </div>
+                    <div class="founding-slots"><div class="slots-bar"><div class="slots-fill" style="width:20%"></div></div><span class="slots-text">8 of 10 spots remaining</span></div>
+                    <a href="#contact" class="btn btn-primary founding-cta">Claim Your Spot</a>
+                </div>
+                <div class="founding-sidebar">
+                    <div class="founding-how-card">
+                        <div class="fhc-label">HOW IT WORKS</div>
+                        <ol class="founding-steps">
+                            <li><strong>Tell us what's broken</strong> — Fill out the form below with your biggest IT headache.</li>
+                            <li><strong>Free discovery call</strong> — We assess your situation and confirm fit.</li>
+                            <li><strong>We execute at 50% off</strong> — Full engagement, no corners cut.</li>
+                            <li><strong>Case study</strong> — We write it, you approve it. Published on our site.</li>
+                        </ol>
+                    </div>
+                    <div class="trust-tags"><span class="trust-tag">AWS</span><span class="trust-tag">Azure</span><span class="trust-tag">Google Cloud</span><span class="trust-tag">SOC 2</span><span class="trust-tag">HIPAA</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="roi-calc" class="section roi-section reveal">
+        <div class="container">
+            <div class="section-header"><h2>The Cost of Inefficiency</h2><p>How much is manual work costing you annually? Find out in 30 seconds.</p></div>
             <div class="roi-container">
                 <form id="roi-form">
                     <div class="roi-form-grid">
-                        <div class="roi-section">
-                            <div class="roi-section-label">Core Inputs</div>
-                            <div class="form-group">
-                                <label>Number of Employees *</label>
-                                <input type="number" id="emp-count" placeholder="10" min="1" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Hours Wasted / Week (per employee) *</label>
-                                <input type="number" id="hours-lost" placeholder="5" min="0.5" step="0.5" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Avg Fully-Loaded Hourly Cost ($) *</label>
-                                <input type="number" id="hourly-rate" placeholder="45" min="1" required>
-                            </div>
-                        </div>
-                        <div class="roi-section">
-                            <div class="roi-section-label">Optional (More Accurate)</div>
-                            <div class="form-group">
-                                <label>Downtime Hours / Month</label>
-                                <input type="number" id="downtime-hours" placeholder="0" min="0" step="0.5">
-                            </div>
-                            <div class="form-group">
-                                <label>Cost per Downtime Hour ($)</label>
-                                <input type="number" id="downtime-rate" placeholder="0" min="0">
-                            </div>
-                            <div class="form-group">
-                                <label>Monthly Software / Tool Spend ($)</label>
-                                <input type="number" id="software-spend" placeholder="0" min="0">
-                            </div>
-                        </div>
+                        <div class="roi-section"><div class="roi-section-label">Core Inputs</div><div class="form-group"><label>Number of Employees *</label><input type="number" id="emp-count" placeholder="10" min="1" required></div><div class="form-group"><label>Hours Wasted / Week (per employee) *</label><input type="number" id="hours-lost" placeholder="5" min="0.5" step="0.5" required></div><div class="form-group"><label>Avg Fully-Loaded Hourly Cost ($) *</label><input type="number" id="hourly-rate" placeholder="45" min="1" required></div></div>
+                        <div class="roi-section"><div class="roi-section-label">Optional (More Accurate)</div><div class="form-group"><label>Downtime Hours / Month</label><input type="number" id="downtime-hours" placeholder="0" min="0" step="0.5"></div><div class="form-group"><label>Cost per Downtime Hour ($)</label><input type="number" id="downtime-rate" placeholder="0" min="0"></div><div class="form-group"><label>Monthly Software / Tool Spend ($)</label><input type="number" id="software-spend" placeholder="0" min="0"></div></div>
                     </div>
-                    <div class="recovery-slider-group">
-                        <label>Realistic Recovery Rate: <strong id="recovery-label">70%</strong></label>
-                        <input type="range" id="recovery-rate" min="40" max="90" value="70" step="5" class="recovery-slider">
-                        <div class="slider-labels"><span>Conservative (40%)</span><span>Aggressive (90%)</span></div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Calculate Annual Savings</button>
+                    <div class="recovery-slider-group"><label>Realistic Recovery Rate: <strong id="recovery-label">70%</strong></label><input type="range" id="recovery-rate" min="40" max="90" value="70" step="5" class="recovery-slider"><div class="slider-labels"><span>Conservative (40%)</span><span>Aggressive (90%)</span></div></div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1rem;">Calculate Annual Savings</button>
                 </form>
-
-                <div id="roi-result" class="hidden">
-                    <div class="roi-result-inner">
-                        <span class="roi-result-label">Estimated Annual Savings</span>
-                        <strong id="estimated-savings" class="roi-savings-value">$0</strong>
-                        <div id="roi-breakdown" class="roi-breakdown"></div>
-                        <p class="roi-disclaimer">Based on inputs provided. Actual results vary by engagement scope.</p>
-                    </div>
-                </div>
+                <div id="roi-result" class="hidden"><div class="roi-result-inner"><span class="roi-result-label">Estimated Annual Savings</span><strong id="estimated-savings" class="roi-savings-value">$0</strong><div id="roi-breakdown" class="roi-breakdown"></div><p class="roi-disclaimer">Based on inputs provided. Actual results vary by engagement scope.</p></div></div>
             </div>
         </div>
     </section>
-
-    <section id="services" class="services reveal">
+    <section class="section insights reveal">
         <div class="container">
-            <div class="section-header">
-                <h2>The "It Just Works" Standard</h2>
-                <p>We don't speak geek. We speak profit, efficiency, and growth.</p>
-            </div>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                        </svg>
-                    </div>
-                    <h3>Revenue Multipliers</h3>
-                    <p>Tech isn't a cost center if it's contributing to growth. We wire your systems to help you capture
-                        every opportunity.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3>Frictionless Workflows</h3>
-                    <p>Stop double-entry. Stop email attachments. We build systems where data flows automatically from A
-                        to B.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3>Protected Assets</h3>
-                    <p>You don't need to be a security expert. You just need to know you're safe. We lock the doors so
-                        you don't have to check them.</p>
-                </div>
+            <div class="section-header"><h2>From Our Practice</h2><p>Lessons from real engagements and the trenches of IT operations.</p></div>
+            <div class="insights-grid">
+                <div class="insight-card"><div class="insight-tag">OPERATIONS</div><h3>The Hidden Tax: Death by 1,000 Tabs</h3><p>Your team is alt-tabbing between 6 apps to complete one task. That context-switching cost is real — about 23% of productive time. Integrated workflows eliminate it.</p><div class="insight-meta"><span>5 min read</span><span>2026</span></div></div>
+                <div class="insight-card"><div class="insight-tag">CLOUD</div><h3>Your AWS Bill Is Lying to You</h3><p>Reserved instances you're not using. Dev environments running 24/7. Oversized databases for undersized workloads. The 5 most common cloud budget killers.</p><div class="insight-meta"><span>6 min read</span><span>2026</span></div></div>
+                <div class="insight-card"><div class="insight-tag">STRATEGY</div><h3>Why You Don't Need a Full-Time CTO (Yet)</h3><p>A fractional CTO gives you 80% of the strategic value at 20% of the cost. Here's how to know when it's the right move.</p><div class="insight-meta"><span>4 min read</span><span>2026</span></div></div>
             </div>
         </div>
     </section>
-
-    <!-- Professional Services (Ala-Carte) -->
-    <section id="pro-services" class="services alt-bg reveal">
+    <section id="pricing" class="section pricing-section reveal">
         <div class="container">
-            <div class="section-header">
-                <h2>Tools That Fit Like a Glove</h2>
-                <p>Stop bending your business to fit off-the-shelf software. We build exactly what you need.</p>
-            </div>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                        </svg>
-                    </div>
-                    <h3>Custom Business Software</h3>
-                    <p>Replace broken spreadsheets with tailored operational software. We build the exact tool you need
-                        to run your unique business processes.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3>Secure AI Agents</h3>
-                    <p>Give your team superpowers. We deploy private AI agents that verify data, draft documents, and
-                        automate workflows securely.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3>Cloud Architecture</h3>
-                    <p>Your cloud bill shouldn't be a mystery. We optimize your AWS/Azure environment for performance,
-                        security, and cost.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="results" class="ops-section reveal">
-        <div class="container">
-            <div class="section-header" style="margin-bottom: 3rem;">
-                <h2>Problems We Solve Every Day.</h2>
-                <p>These scenarios might sound familiar. They're exactly why we exist.</p>
-            </div>
-
-            <div class="scenario-grid">
-                <div class="scenario-card">
-                    <h3>The 3AM Server Crash</h3>
-                    <p>Your main application goes down on a Friday night. Nobody knows the admin password. The last backup was... when, exactly? We make sure you never have that conversation again.</p>
-                </div>
-                <div class="scenario-card">
-                    <h3>The Spreadsheet That Runs Everything</h3>
-                    <p>One person built it. Nobody else understands it. If it breaks, half your operation stops. We replace fragile spreadsheet workflows with actual software that your whole team can rely on.</p>
-                </div>
-                <div class="scenario-card">
-                    <h3>The Cloud Bill Surprise</h3>
-                    <p>You moved to the cloud because it was supposed to save money. Now the bill is three times what you expected and nobody can explain why. We audit, optimize, and get your costs under control.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="pricing-section reveal">
-        <div class="container">
-            <div class="section-header">
-                <h2>Stop Paying by the Hour.</h2>
-                <p>Invest in results. We align our incentives with yours.</p>
-            </div>
-
+            <div class="section-header"><h2>Stop Paying by the Hour.</h2><p>Invest in results. We align our incentives with yours.</p></div>
             <div class="pricing-grid">
-                <!-- Plan 1 -->
-                <div class="plan-column">
-                    <div class="plan-name">The Fixer</div>
-                    <div class="plan-desc">For when things are okay, but could be better.</div>
-                    <ul class="plan-features">
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Monthly Strategy Check-in</li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Roadmap Execution</li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Security Policy Oversight</li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Vendor Management</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary"
-                        style="width: 100%; justify-content: center; text-align: center;">Let's Fix It</a>
-                </div>
-
-                <!-- Plan 2 -->
-                <div class="plan-column featured">
-                    <div class="plan-badge">Most Popular</div>
-                    <div class="plan-name">The Partner</div>
-                    <div class="plan-desc">For when you want to grow fast and break nothing.</div>
-                    <ul class="plan-features">
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> <strong>Your Fractional CTO</strong></li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Weekly Sprints & Updates</li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Full Architecture Design</li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Budget Optimization</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary"
-                        style="width: 100%; justify-content: center; text-align: center;">Let's Scale</a>
-                </div>
-
-                <!-- Plan 3 -->
-                <div class="plan-column">
-                    <div class="plan-name">The Architect</div>
-                    <div class="plan-desc">For major shifts, mergers, or critical pivots.</div>
-                    <ul class="plan-features">
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> <strong>Project-Defined Scope</strong></li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Cloud Migrations</li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> M&A Due Diligence</li>
-                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg> Total Security Overhaul</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary"
-                        style="width: 100%; justify-content: center; text-align: center;">Let's Build</a>
-                </div>
+                <div class="plan-column"><div class="plan-name">The Fixer</div><div class="plan-desc">For when things work, but could work better.</div><ul class="plan-features"><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Monthly Strategy Check-in</li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Roadmap Execution</li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Security Policy Oversight</li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Vendor Management</li></ul><a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center;">Let's Fix It</a></div>
+                <div class="plan-column featured"><div class="plan-badge">Most Popular</div><div class="plan-name">The Partner</div><div class="plan-desc">For when you want to grow fast and break nothing.</div><ul class="plan-features"><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <strong>Your Fractional CTO</strong></li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Weekly Sprints &amp; Updates</li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Full Architecture Design</li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Budget Optimization</li></ul><a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Let's Scale</a></div>
+                <div class="plan-column"><div class="plan-name">The Architect</div><div class="plan-desc">For major shifts, mergers, or critical pivots.</div><ul class="plan-features"><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <strong>Project-Defined Scope</strong></li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Cloud Migrations</li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> M&amp;A Due Diligence</li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Total Security Overhaul</li></ul><a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center;">Let's Build</a></div>
             </div>
         </div>
     </section>
-
-    <section id="contact" class="contact reveal">
+    <section class="section faq reveal">
         <div class="container">
-            <div class="section-header">
-                <h2>Take Your Life Back.</h2>
-                <p>You run the business. We run the engine.</p>
+            <div class="section-header"><h2>Questions We Get Asked</h2><p>Straight answers, no jargon.</p></div>
+            <div class="faq-list">
+                <details class="faq-item"><summary>What's a fractional CTO?</summary><div class="faq-answer">A fractional CTO is a senior technology leader who works with your business part-time. You get the strategic thinking, vendor management, and architecture decisions of a full-time CTO — without the $200K+ salary. Most of our clients need 10-20 hours per month of CTO-level work.</div></details>
+                <details class="faq-item"><summary>We already have an IT person. Why do we need you?</summary><div class="faq-answer">Your IT person is great at keeping the lights on — help desk tickets, password resets, hardware setup. We're the strategic layer above that. We design the systems, choose the tools, plan the roadmap, and make sure technology is driving revenue. We make your existing IT person more effective, not redundant.</div></details>
+                <details class="faq-item"><summary>How is this different from an MSP?</summary><div class="faq-answer">MSPs provide monitoring and break-fix support — they react when things go wrong. We're proactive. We design your technology strategy, build custom tools, optimize cloud spend, and align everything to business goals. Think of an MSP as a mechanic and us as the engineer who designs the engine.</div></details>
+                <details class="faq-item"><summary>What industries do you work with?</summary><div class="faq-answer">Healthcare, professional services, manufacturing, retail, tech startups — we work across industries. Our approach is business-first, not industry-first. If your business runs on technology, we can help. We adapt our compliance knowledge to your regulatory requirements (HIPAA, SOC 2, PCI).</div></details>
+                <details class="faq-item"><summary>What does the Founding Client Program include?</summary><div class="faq-answer">Your first engagement at 50% off — whether that's a technology audit, cloud migration, custom software build, or fractional CTO retainer. Full scope, no shortcuts. In return, we publish a case study about the engagement (anonymized or named, your choice). You also get priority scheduling and a permanent rate lock.</div></details>
+                <details class="faq-item"><summary>How quickly can you start?</summary><div class="faq-answer">Most engagements begin within 1-2 weeks of the discovery call. For urgent situations (server down, critical system failure), we can start within 48 hours. The discovery call is free and takes about 30 minutes.</div></details>
             </div>
-            <div class="form-container">
-                <form id="contactForm" action="https://formspree.io/f/mdaloeor" method="POST">
-                    <div class="form-group">
-                        <label>Full Name *</label>
-                        <input type="text" name="fullName" placeholder="John Doe" required>
+        </div>
+    </section>
+    <section id="contact" class="section contact reveal">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Take Your Life Back.</h2>
+                    <p>You run the business. We run the engine. Every engagement starts with a free discovery call.</p>
+                    <div class="contact-details">
+                        <div class="cd-item"><strong>General</strong><a href="mailto:hello@cuberootsolutions.com">hello@cuberootsolutions.com</a></div>
+                        <div class="cd-item"><strong>Response Time</strong><span>Within 24 hours</span></div>
+                        <div class="cd-item"><strong>Discovery Call</strong><span>30 min, free, no obligation</span></div>
                     </div>
-                    <div class="form-group">
-                        <label>Business Email *</label>
-                        <input type="email" name="email" placeholder="you@company.com" required>
+                </div>
+                <form id="contactForm" action="https://formspree.io/f/mdaloeor" method="POST" class="contact-form">
+                    <div class="form-row"><input type="text" name="fullName" placeholder="Full Name" required><input type="email" name="email" placeholder="Work Email" required></div>
+                    <input type="text" name="company" placeholder="Company Name" required>
+                    <div class="form-row">
+                        <select name="employees" required><option value="">Team Size</option><option>1-5</option><option>6-15</option><option>16-35</option><option>36-50</option><option>51+</option></select>
+                        <select name="interest"><option value="">Service Interest</option><option>Founding Client Program (50% Off)</option><option>The Fixer</option><option>The Partner</option><option>The Architect</option><option>Custom Software</option><option>AI Agent Deployment</option></select>
                     </div>
-                    <div class="form-group">
-                        <label>Company Name *</label>
-                        <input type="text" name="company" placeholder="Your Company" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Number of Employees *</label>
-                        <select name="employees" required>
-                            <option value="">Select Team Size</option>
-                            <option>1-5</option>
-                            <option>6-15</option>
-                            <option>16-35</option>
-                            <option>36-50</option>
-                            <option>51+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Service Interest</label>
-                        <select name="interest" id="interest">
-                            <option value="">Select Package</option>
-                            <option>The Fixer</option>
-                            <option>The Partner</option>
-                            <option>The Architect</option>
-                            <option>Custom solution</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Current IT Challenges *</label>
-                        <textarea name="challenges" rows="4"
-                            placeholder="Tell us about your current IT challenges and goals" required></textarea>
-                    </div>
-                    <div id="form-success"
-                        style="display:none; padding:1rem; background:#10b981; color:white; border-radius:8px; margin-bottom:1rem;">
-                    </div>
-                    <div id="form-error"
-                        style="display:none; padding:1rem; background:#ef4444; color:white; border-radius:8px; margin-bottom:1rem;">
-                    </div>
-                    <button type="submit" class="cta-button" style="width: 100%; font-size: 1.1rem;">Get Free
-                        Assessment</button>
+                    <textarea name="challenges" rows="4" placeholder="What's your biggest IT headache right now?" required></textarea>
+                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Get Free Assessment</button>
+                    <div id="form-success" class="form-msg success">Message sent. We'll be in touch within 24 hours.</div>
+                    <div id="form-error" class="form-msg error">Something went wrong. Please email us directly or try again.</div>
                 </form>
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <h4><span style="color: var(--accent-green);">[ ]</span> Cube Root Solutions</h4>
-                    <p>Invisible technology. Visible profit. We handle the infrastructure so you can focus on what matters — growing your business.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#pricing">The Fixer</a></li>
-                        <li><a href="#pricing">The Partner</a></li>
-                        <li><a href="#pricing">The Architect</a></li>
-                        <li><a href="#pro-services">Custom Software</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
+                <div class="footer-col"><h4><span style="color:var(--accent-green);">[ ]</span> Cube Root Solutions</h4><p>Invisible technology. Visible profit.</p></div>
+                <div class="footer-col"><h4>Services</h4><ul><li><a href="#pricing">The Fixer</a></li><li><a href="#pricing">The Partner</a></li><li><a href="#pricing">The Architect</a></li><li><a href="#pro-services">Custom Software</a></li></ul></div>
+                <div class="footer-col"><h4>Company</h4><ul><li><a href="#how-we-work">How We Work</a></li><li><a href="#contact">Contact</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li></ul></div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Cube Root Solutions. All rights reserved.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Cube Root Solutions. All rights reserved.</p></div>
         </div>
     </footer>
-
     <script src="js/main.js"></script>
 </body>
-
 </html>
