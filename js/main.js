@@ -1,7 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     initROICalculator();
     initHamburger();
     initReveal();
+    initNavScroll();
+    initSmoothScroll();
+    initContactForm();
 });
 
 function initHamburger() {
@@ -38,60 +41,140 @@ function initReveal() {
     sections.forEach(function(s) { observer.observe(s); });
 }
 
-/* --- ROI Calculator --- */
+function initNavScroll() {
+    var nav = document.querySelector('nav');
+    if (!nav) return;
+
+    var scrolled = false;
+    window.addEventListener('scroll', function() {
+        var shouldScroll = window.scrollY > 80;
+        if (shouldScroll !== scrolled) {
+            scrolled = shouldScroll;
+            if (scrolled) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        }
+    }, { passive: true });
+}
+
+function initSmoothScroll() {
+    var navEl = document.querySelector('nav');
+    var navHeight = navEl ? navEl.offsetHeight : 0;
+
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            var target = document.querySelector(targetId);
+            if (!target) return;
+
+            e.preventDefault();
+            var offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        });
+    });
+}
+
+function initContactForm() {
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+
+    var successEl = document.getElementById('form-success');
+    var errorEl = document.getElementById('form-error');
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var originalText = submitBtn ? submitBtn.textContent : '';
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        if (successEl) successEl.style.display = 'none';
+        if (errorEl) errorEl.style.display = 'none';
+
+        if (submitBtn) {
+            submitBtn.classList.add('btn-loading');
+            submitBtn.textContent = 'Sending...';
+        }
+
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+            if (response.ok) {
+                if (successEl) {
+                    successEl.textContent = "Message sent successfully! We'll be in touch within 24 hours.";
+                    successEl.style.display = 'block';
+                }
+                form.reset();
+            } else {
+                throw new Error('Server responded with ' + response.status);
+            }
+        }).catch(function() {
+            if (errorEl) {
+                errorEl.textContent = 'Something went wrong. Please email us directly or try again.';
+                errorEl.style.display = 'block';
+            }
+        }).finally(function() {
+            if (submitBtn) {
+                submitBtn.classList.remove('btn-loading');
+                submitBtn.textContent = originalText;
+            }
+        });
+    });
+}
+
 function initROICalculator() {
-    const roiForm = document.getElementById('roi-form');
+    var roiForm = document.getElementById('roi-form');
     if (!roiForm) return;
 
-    const resultBox = document.getElementById('roi-result');
-    const savingsDisplay = document.getElementById('estimated-savings');
-    const breakdownEl = document.getElementById('roi-breakdown');
-    const recoverySlider = document.getElementById('recovery-rate');
-    const recoveryLabel = document.getElementById('recovery-label');
+    var resultBox = document.getElementById('roi-result');
+    var savingsDisplay = document.getElementById('estimated-savings');
+    var breakdownEl = document.getElementById('roi-breakdown');
+    var recoverySlider = document.getElementById('recovery-rate');
+    var recoveryLabel = document.getElementById('recovery-label');
 
-    // Sync recovery slider label
     if (recoverySlider && recoveryLabel) {
-        recoverySlider.addEventListener('input', () => {
+        recoverySlider.addEventListener('input', function() {
             recoveryLabel.textContent = recoverySlider.value + '%';
         });
     }
 
-    roiForm.addEventListener('submit', (e) => {
+    roiForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const employees = parseInt(document.getElementById('emp-count').value) || 0;
-        const hours = parseFloat(document.getElementById('hours-lost').value) || 0;
-        const rate = parseFloat(document.getElementById('hourly-rate').value) || 0;
+        var employees = parseInt(document.getElementById('emp-count').value) || 0;
+        var hours = parseFloat(document.getElementById('hours-lost').value) || 0;
+        var rate = parseFloat(document.getElementById('hourly-rate').value) || 0;
 
-        // Optional fields
-        const downtimeHrs = parseFloat(document.getElementById('downtime-hours')?.value) || 0;
-        const downtimeRate = parseFloat(document.getElementById('downtime-rate')?.value) || 0;
-        const softwareSpend = parseFloat(document.getElementById('software-spend')?.value) || 0;
-        const recoveryPct = parseInt(recoverySlider?.value) || 70;
+        var downtimeHrsEl = document.getElementById('downtime-hours');
+        var downtimeRateEl = document.getElementById('downtime-rate');
+        var softwareSpendEl = document.getElementById('software-spend');
 
-        // Labor waste: 52 weeks/year
-        const laborWaste = employees * hours * rate * 52;
+        var downtimeHrs = downtimeHrsEl ? (parseFloat(downtimeHrsEl.value) || 0) : 0;
+        var downtimeRate = downtimeRateEl ? (parseFloat(downtimeRateEl.value) || 0) : 0;
+        var softwareSpend = softwareSpendEl ? (parseFloat(softwareSpendEl.value) || 0) : 0;
+        var recoveryPct = recoverySlider ? (parseInt(recoverySlider.value) || 70) : 70;
 
-        // Downtime cost: hours * rate * 12 months
-        const downtimeCost = downtimeHrs * downtimeRate * 12;
+        var laborWaste = employees * hours * rate * 52;
+        var downtimeCost = downtimeHrs * downtimeRate * 12;
+        var softwareSavings = softwareSpend * 12 * 0.25;
+        var totalOpportunity = laborWaste + downtimeCost + softwareSavings;
+        var annualSavings = Math.round(totalOpportunity * (recoveryPct / 100));
 
-        // Software consolidation: 25% typical savings
-        const softwareSavings = softwareSpend * 12 * 0.25;
-
-        // Total opportunity
-        const totalOpportunity = laborWaste + downtimeCost + softwareSavings;
-
-        // Apply realistic recovery rate
-        const annualSavings = Math.round(totalOpportunity * (recoveryPct / 100));
-
-        const fmt = (n) => new Intl.NumberFormat('en-US', {
-            style: 'currency', currency: 'USD', maximumFractionDigits: 0
-        }).format(n);
+        var fmt = function(n) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency', currency: 'USD', maximumFractionDigits: 0
+            }).format(n);
+        };
 
         savingsDisplay.textContent = fmt(annualSavings);
 
-        // Build breakdown
-        let breakdownHtml = '';
+        var breakdownHtml = '';
         if (laborWaste > 0) {
             breakdownHtml += '<div class="breakdown-row"><span>Productivity recovery</span><span>' + fmt(Math.round(laborWaste * recoveryPct / 100)) + '/yr</span></div>';
         }
